@@ -1,0 +1,332 @@
+[
+    {
+        "id": "391a6e78d7def19c",
+        "type": "switch",
+        "z": "cbd47bf5a762e2f7",
+        "name": "",
+        "property": "payload.zone",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 340,
+        "wires": [
+            [
+                "467cb2688dfc4afe",
+                "512b15d9c5138535"
+            ],
+            [
+                "fb39f7253fc3f516",
+                "512b15d9c5138535"
+            ]
+        ]
+    },
+    {
+        "id": "8ba5f2e816c565d2",
+        "type": "inject",
+        "z": "cbd47bf5a762e2f7",
+        "name": "Task 1 zone 1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"baseProperties\":{\"name\":\"Maintenance-activity-1\",\"type\":\"Maintenance\",\"status\":\"online\",\"version\":\"1.0.0.0\",\"category\":\"Not\",\"entrynode\":\"m1\",\"unique_id\":\"Maintenance-activity-1\",\"entrypoint\":true,\"displayname\":\"Maintenance-1\",\"triggertime\":1730462400,\"instance_ref\":\"factory-1\",\"data_generation_type\":\"scheduled\"},\"customProperties\":{\"zone\":\"1\",\"end_time\":\"2024-11-01T23:59:00\",\"full_date\":\"2024-11-01\",\"timestamp\":\"2024-11-01T12:00:00\",\"day_of_week\":\"Friday\",\"entity_name\":\"Maintenance\",\"additional_info\":\"Low Priority\"},\"financialProperties\":{\"opex\":[{\"name\":\"Abc\",\"unit\":\"Rupees\",\"value\":100,\"status\":\"online\",\"frequency\":\"Month\"}]}}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "0fc07f96538c2a3e"
+            ]
+        ]
+    },
+    {
+        "id": "1079a4228f5685fa",
+        "type": "inject",
+        "z": "cbd47bf5a762e2f7",
+        "name": "Task 2 zone 2",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"baseProperties\":{\"name\":\"Maintenance-activity-1\",\"type\":\"Maintenance\",\"status\":\"online\",\"version\":\"1.0.0.0\",\"category\":\"Not\",\"entrynode\":\"m1\",\"unique_id\":\"Maintenance-activity-1\",\"entrypoint\":true,\"displayname\":\"Maintenance-1\",\"triggertime\":1730462400,\"instance_ref\":\"factory-1\",\"data_generation_type\":\"scheduled\"},\"customProperties\":{\"zone\":\"2\",\"end_time\":\"2024-11-01T23:59:00\",\"full_date\":\"2024-11-01\",\"timestamp\":\"2024-11-01T12:00:00\",\"day_of_week\":\"Friday\",\"entity_name\":\"Maintenance\",\"additional_info\":\"Low Priority\"},\"financialProperties\":{\"opex\":[{\"name\":\"Abc\",\"unit\":\"Rupees\",\"value\":100,\"status\":\"online\",\"frequency\":\"Month\"}]}}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "0fc07f96538c2a3e"
+            ]
+        ]
+    },
+    {
+        "id": "fa6337d2d9a62ad4",
+        "type": "inject",
+        "z": "cbd47bf5a762e2f7",
+        "name": "Employee 1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"baseProperties\":{\"name\":\"Technician-tech-1\",\"type\":\"Technician\",\"status\":\"online\",\"version\":\"1.0.0.0\",\"category\":\"Not\",\"entrynode\":\"t1\",\"unique_id\":\"Technician-tech-1\",\"entrypoint\":true,\"displayname\":\"Technician-1\",\"triggertime\":1730440800,\"instance_ref\":\"factory-1\",\"data_generation_type\":\"scheduled\"},\"customProperties\":{\"end_time\":\"2024-11-01T18: 00: 00\",\"full_date\":\"2024-11-01\",\"timestamp\":\"2024-11-01T06: 00: 00\",\"day_of_week\":\"Friday\",\"entity_name\":\"Technician\",\"workinghours\":\"PM\",\"additional_info\":\"Low Priority\"},\"financialProperties\":{\"opex\":[{\"name\":\"Abcd\",\"unit\":\"Rupees\",\"value\":100,\"status\":\"online\",\"frequency\":\"Month\"}]}}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "0fc07f96538c2a3e"
+            ]
+        ]
+    },
+    {
+        "id": "ae4186cdf7b6bf44",
+        "type": "inject",
+        "z": "cbd47bf5a762e2f7",
+        "name": "Employee 2",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"baseProperties\":{\"name\":\"Technician-tech-2\",\"type\":\"Technician\",\"status\":\"online\",\"version\":\"1.0.0.0\",\"category\":\"Not\",\"entrynode\":\"t1\",\"unique_id\":\"Technician-tech-2\",\"entrypoint\":true,\"displayname\":\"Technician-2\",\"triggertime\":1730440800,\"instance_ref\":\"factory-1\",\"data_generation_type\":\"scheduled\"},\"customProperties\":{\"end_time\":\"2024-11-01T18: 00: 00\",\"full_date\":\"2024-11-01\",\"timestamp\":\"2024-11-01T06: 00: 00\",\"day_of_week\":\"Friday\",\"entity_name\":\"Technician\",\"workinghours\":\"PM\",\"additional_info\":\"Low Priority\"},\"financialProperties\":{\"opex\":[{\"name\":\"Abcd\",\"unit\":\"Rupees\",\"value\":100,\"status\":\"online\",\"frequency\":\"Month\"}]}}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 440,
+        "wires": [
+            [
+                "0fc07f96538c2a3e"
+            ]
+        ]
+    },
+    {
+        "id": "d76a48de297b1125",
+        "type": "inject",
+        "z": "cbd47bf5a762e2f7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 480,
+        "wires": [
+            [
+                "e9e284f36bd2fb98"
+            ]
+        ]
+    },
+    {
+        "id": "e9e284f36bd2fb98",
+        "type": "change",
+        "z": "cbd47bf5a762e2f7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tasks",
+                "pt": "flow",
+                "to": "[]",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "technicians",
+                "pt": "flow",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 260,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0fc07f96538c2a3e",
+        "type": "function",
+        "z": "cbd47bf5a762e2f7",
+        "name": "Assign Task",
+        "func": "// Retrieve tasks and technicians from flow memory (or initialize them if not present)\nlet tasks = flow.get('tasks') || [];\nlet technicians = flow.get('technicians') || [];\n\n// Process the incoming message payload\nif (msg.payload && msg.payload.baseProperties) {\n    if (msg.payload.baseProperties.type === \"Maintenance\") {\n        // It's a task, add it to the tasks array\n        tasks.push(msg.payload);\n        flow.set('tasks', tasks);\n    } else if (msg.payload.baseProperties.type === \"Technician\") {\n        // It's a technician, add it to the technicians array\n        technicians.push(msg.payload);\n        flow.set('technicians', technicians);\n    } else {\n        // Unknown type, return an error message\n        msg.payload = { message: \"Unknown input type. No action taken.\" };\n        return msg;\n    }\n}\n\n// Function to assign tasks to available technicians\nfunction assignTasksToTechnicians() {\n    let output = {\n        assignedTask: null,\n        status: null,\n        message: null\n    };\n\n    // Check if there are tasks and technicians available for assignment\n    if (tasks.length > 0 && technicians.length > 0) {\n        // Find an available technician (status is either \"online\" or \"idle\")\n        let availableTechnician = technicians.find(emp =>\n            emp.baseProperties.status === \"online\" || emp.baseProperties.status === \"idle\");\n\n        if (availableTechnician) {\n            // Assign the first available task to the first available technician\n            let assignedTask = tasks.shift(); // Remove the task from the list\n            availableTechnician.baseProperties.status = \"assigned\"; // Mark technician as \"working\"\n            availableTechnician.currentTask = assignedTask.baseProperties.name;\n\n            // Store the updated task list and technician list in flow memory\n            flow.set('tasks', tasks);\n            flow.set('technicians', technicians);\n\n            // Prepare the output payload with task and technician data\n            output.assignedTask = {\n                taskDetails: {\n                    taskId: assignedTask.baseProperties.unique_id,\n                    taskName: assignedTask.baseProperties.name,\n                    taskStatus: assignedTask.baseProperties.status,\n                    taskTimestamp: assignedTask.customProperties.timestamp,\n                    taskEndTime: assignedTask.customProperties.end_time,\n                    additionalInfo: assignedTask.customProperties.additional_info,\n                    zone: assignedTask.customProperties.zone\n                },\n                employeeDetails: {\n                    technicianId: availableTechnician.baseProperties.unique_id,\n                    technicianName: availableTechnician.baseProperties.name,\n                    technicianStatus: availableTechnician.baseProperties.status,\n                    technicianTask: availableTechnician.currentTask\n                }\n            };\n            output.zone = assignedTask.customProperties.zone;\n            output.status = \"Task assigned successfully\";\n            output.message = `Technician ${availableTechnician.baseProperties.name} is now working on task ${assignedTask.baseProperties.name}.`;\n        } else {\n            // Return null if no technician is available\n            return null;\n        }\n    } else {\n        // Return null if no tasks or technicians are available\n        return null;\n    }\n\n    return output;\n}\n\n// Assign tasks to available technicians\nlet result = assignTasksToTechnicians();\n\n// If the result is null (no task or technician available), return null\nif (result === null) {\n    return null;\n}\n\n// Prepare the output message\nmsg.payload = result;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// // Retrieve tasks and technicians from flow memory (or initialize them if not present)\n// let tasks = flow.get('tasks') || [];\n// let technicians = flow.get('technicians') || [];\n\n// // Process the incoming message payload\n// if (msg.payload && msg.payload.baseProperties) {\n//     if (msg.payload.baseProperties.type === \"Maintenance\") {\n//         // It's a task, add it to the tasks array\n//         tasks.push(msg.payload);\n//         flow.set('tasks', tasks);\n//     } else if (msg.payload.baseProperties.type === \"Technician\") {\n//         // It's a technician, add it to the technicians array\n//         technicians.push(msg.payload);\n//         flow.set('technicians', technicians);\n//     } else {\n//         // Unknown type, return an error message\n//         msg.payload = { message: \"Unknown input type. No action taken.\" };\n//         return msg;\n//     }\n// }\n\n// // Function to assign tasks to available technicians\n// function assignTasksToTechnicians() {\n//     let output = {\n//         assignedTask: null,\n//         status: null,\n//         message: null\n//     };\n\n//     // Check if there are tasks and technicians available for assignment\n//     if (tasks.length > 0 && technicians.length > 0) {\n//         // Find an available technician (status is either \"online\" or \"idle\")\n//         let availableTechnician = technicians.find(emp =>\n//             emp.baseProperties.status === \"online\" || emp.baseProperties.status === \"idle\");\n\n//         if (availableTechnician) {\n//             // Assign the first available task to the first available technician\n//             let assignedTask = tasks.shift(); // Remove the task from the list\n//             availableTechnician.baseProperties.status = \"assigned\"; // Mark technician as \"working\"\n//             availableTechnician.currentTask = assignedTask.baseProperties.name;\n\n//             // Store the updated task list and technician list in flow memory\n//             flow.set('tasks', tasks);\n//             flow.set('technicians', technicians);\n\n//             // Prepare the output payload with task and technician data\n//             output.assignedTask = {\n//                 taskDetails: {\n//                     taskId: assignedTask.baseProperties.unique_id,\n//                     taskName: assignedTask.baseProperties.name,\n//                     taskStatus: assignedTask.baseProperties.status,\n//                     taskTimestamp: assignedTask.customProperties.timestamp,\n//                     taskEndTime: assignedTask.customProperties.end_time,\n//                     additionalInfo: assignedTask.customProperties.additional_info,\n//                     zone: assignedTask.customProperties.zone\n//                 },\n//                 employeeDetails: {\n//                     technicianId: availableTechnician.baseProperties.unique_id,\n//                     technicianName: availableTechnician.baseProperties.name,\n//                     technicianStatus: availableTechnician.baseProperties.status,\n//                     technicianTask: availableTechnician.currentTask\n//                 }\n//             };\n//             output.zone = assignedTask.customProperties.zone\n//             output.status = \"Task assigned successfully\";\n//             output.message = `Technician ${availableTechnician.baseProperties.name} is now working on task ${assignedTask.baseProperties.name}.`;\n//         } else {\n//             // Return null if no technician is available\n//             return null;\n//         }\n//     } else {\n//         // Return null if no tasks or technicians are available\n//         return null;\n//     }\n\n//     return output;\n// }\n\n// // Assign tasks to available technicians\n// let result = assignTasksToTechnicians();\n\n// // If the result is null (no task or technician available), return null\n// if (result === null) {\n//     return null;\n// }\n\n// // Prepare the output message\n// msg.payload = result;\n// return msg;\n",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "41c144b5ab87d962",
+                "391a6e78d7def19c"
+            ]
+        ]
+    },
+    {
+        "id": "41c144b5ab87d962",
+        "type": "debug",
+        "z": "cbd47bf5a762e2f7",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "467cb2688dfc4afe",
+        "type": "debug",
+        "z": "cbd47bf5a762e2f7",
+        "name": "Zone 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "512b15d9c5138535",
+        "type": "delay",
+        "z": "cbd47bf5a762e2f7",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 800,
+        "y": 280,
+        "wires": [
+            [
+                "637bc8ace231fbad"
+            ]
+        ]
+    },
+    {
+        "id": "637bc8ace231fbad",
+        "type": "function",
+        "z": "cbd47bf5a762e2f7",
+        "name": "function 2",
+        "func": "// Function to change technician status to idle\nfunction setTechnicianIdleFromPayload(payload) {\n    let technicians = flow.get('technicians') || []; // Get the latest technician list\n\n    // Check if technicians array is available\n    if (!technicians || technicians.length === 0) {\n        return {\n            status: \"Error\",\n            message: \"No technicians found.\"\n        };\n    }\n\n    // Extract technicianId from the incoming payload\n    let technicianId = payload.assignedTask.employeeDetails.technicianId;\n\n    // Find the technician by their unique ID\n    let technician = technicians.find(emp => emp.baseProperties.unique_id === technicianId);\n\n    // Check if technician exists and is currently working\n    if (technician && technician.baseProperties.status === \"assigned\") {\n        // Change technician's status to idle\n        technician.baseProperties.status = \"idle\";\n        technician.currentTask = null; // Remove current task assignment\n\n        // Store the updated technician list back in flow memory\n        flow.set('technicians', technicians);\n\n        // Prepare the output message\n        return {\n            status: \"Technician status updated successfully.\",\n            message: `Technician ${technician.baseProperties.name} is now idle.`\n        };\n    } else {\n        // If technician is not found or not working, return an error message\n        return {\n            status: \"Error\",\n            message: `Technician ${technicianId} is not currently working or doesn't exist.`\n        };\n    }\n}\n\n// Call the function with the payload\nlet result = setTechnicianIdleFromPayload(msg.payload);\n\n// Set the result to msg.payload\nmsg.payload = result;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 280,
+        "wires": [
+            [
+                "bc2f6beca1f224d6"
+            ]
+        ]
+    },
+    {
+        "id": "bc2f6beca1f224d6",
+        "type": "debug",
+        "z": "cbd47bf5a762e2f7",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "fb39f7253fc3f516",
+        "type": "debug",
+        "z": "cbd47bf5a762e2f7",
+        "name": "Zone 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 400,
+        "wires": []
+    }
+]
